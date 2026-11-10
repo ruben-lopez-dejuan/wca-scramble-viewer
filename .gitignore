@@ -1,0 +1,11 @@
+# Claves y paquetes generados por Chrome: nunca subirlos
+*.pem
+*.crx
+
+# Paquetes para la Chrome Web Store
+dist/
+
+# Sistema
+Thumbs.db
+desktop.ini
+.DS_Store

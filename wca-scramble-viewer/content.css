@@ -1,0 +1,33 @@
+#competition_scrambles th.wsv-th {
+  white-space: nowrap;
+  cursor: help;
+}
+#competition_scrambles td.wsv-cell {
+  width: 1%;
+  white-space: nowrap;
+  vertical-align: middle;
+  padding-top: 4px !important;
+  padding-bottom: 4px !important;
+}
+.wsv-wrap {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  align-items: center;
+}
+.wsv-img svg {
+  display: block;
+  background: transparent;
+}
+.wsv-img [data-face] {
+  cursor: pointer;
+}
+.wsv-img [data-face]:hover {
+  filter: brightness(1.12);
+}
+.wsv-error {
+  color: #b00020;
+  font-size: 12px;
+  white-space: normal;
+  max-width: 220px;
+}

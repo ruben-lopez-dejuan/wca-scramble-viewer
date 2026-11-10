@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <title>WCA Scramble Viewer</title>
+  <style>
+    :root { --bg: #fff; --text: #1d2129; --muted: #5f6672; --border: #dde1e6; --accent: #1f6feb; }
+    @media (prefers-color-scheme: dark) {
+      :root { --bg: #1e2127; --text: #e6e8eb; --muted: #9aa1ab; --border: #2e333b; --accent: #5b9dff; }
+    }
+    body { margin: 0; width: 260px; padding: 14px; background: var(--bg); color: var(--text);
+      font: 13px/1.4 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; }
+    h1 { font-size: 15px; margin: 0 0 10px; }
+    label { display: flex; align-items: center; gap: 8px; margin-bottom: 10px; }
+    input[type=range] { flex: 1; }
+    output { color: var(--muted); min-width: 44px; text-align: right; font-variant-numeric: tabular-nums; }
+    button { width: 100%; font: inherit; padding: 7px; border-radius: 6px; border: 1px solid var(--border);
+      background: transparent; color: var(--text); cursor: pointer; }
+    button:hover { border-color: var(--accent); }
+    p { color: var(--muted); font-size: 12px; margin: 10px 0 0; }
+  </style>
+</head>
+<body>
+  <h1>WCA Scramble Viewer</h1>
+  <label><input type="checkbox" id="enabled"> Mostrar imágenes</label>
+  <label>Tamaño <input type="range" id="height" min="60" max="320" step="5"><output id="out"></output></label>
+  <button id="colors">Personalizar colores…</button>
+  <p>Consejo: en la página de mezclas, haz clic en una pegatina para cambiar el color de esa cara.</p>
+  <script src="puzzles.js"></script>
+  <script src="settings.js"></script>
+  <script src="popup.js"></script>
+</body>
+</html>

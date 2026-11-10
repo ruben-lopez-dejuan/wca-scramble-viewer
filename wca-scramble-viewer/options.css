@@ -1,0 +1,81 @@
+:root {
+  --bg: #f4f5f7;
+  --card: #ffffff;
+  --text: #1d2129;
+  --muted: #5f6672;
+  --border: #dde1e6;
+  --accent: #1f6feb;
+  --danger: #b42318;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #15171b;
+    --card: #1e2127;
+    --text: #e6e8eb;
+    --muted: #9aa1ab;
+    --border: #2e333b;
+    --accent: #5b9dff;
+    --danger: #ff7b6b;
+  }
+}
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  padding: 24px 16px 48px;
+  background: var(--bg);
+  color: var(--text);
+  font: 14px/1.45 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+}
+header, .general, main { max-width: 1100px; margin: 0 auto; }
+h1 { font-size: 22px; margin: 0 0 4px; }
+header p { color: var(--muted); margin: 0 0 20px; max-width: 70ch; }
+h2 { font-size: 16px; margin: 0 0 12px; }
+.card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 16px;
+}
+.general { margin-bottom: 16px; display: flex; flex-wrap: wrap; gap: 12px 28px; align-items: center; }
+.general h2 { width: 100%; margin: 0; }
+.row { display: flex; align-items: center; gap: 8px; }
+output { min-width: 4ch; color: var(--muted); font-variant-numeric: tabular-nums; }
+main {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(330px, 1fr));
+  gap: 16px;
+}
+.preview {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 150px;
+  margin-bottom: 12px;
+  border-radius: 8px;
+  background: #ffffff;
+  padding: 8px;
+}
+.preview svg { max-width: 100%; height: auto; max-height: 220px; }
+.preview [data-face] { cursor: pointer; }
+.faces {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+  gap: 6px 12px;
+  margin-bottom: 12px;
+}
+.faces label { display: flex; align-items: center; gap: 8px; font-size: 13px; }
+.faces input[type=color] {
+  width: 34px; height: 24px; padding: 0; border: 1px solid var(--border);
+  border-radius: 4px; background: none; cursor: pointer; flex: none;
+}
+button {
+  font: inherit;
+  padding: 6px 12px;
+  border-radius: 6px;
+  border: 1px solid var(--border);
+  background: var(--card);
+  color: var(--text);
+  cursor: pointer;
+}
+button:hover { border-color: var(--accent); }
+button.danger { color: var(--danger); }

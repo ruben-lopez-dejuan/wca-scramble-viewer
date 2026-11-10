@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <title>WCA Scramble Viewer – Colores</title>
+  <link rel="stylesheet" href="options.css">
+</head>
+<body>
+  <header>
+    <h1>WCA Scramble Viewer</h1>
+    <p>Esquemas de color de las imágenes de mezcla. Los valores por defecto son los de TNoodle.
+      Puedes cambiar un color con su selector o haciendo clic directamente sobre una pegatina de la vista previa.</p>
+  </header>
+
+  <section class="card general">
+    <h2>General</h2>
+    <label class="row"><input type="checkbox" id="enabled"> Mostrar imágenes en las páginas de mezclas</label>
+    <label class="row">Altura de las imágenes
+      <input type="range" id="height" min="60" max="320" step="5">
+      <output id="heightOut"></output>
+    </label>
+    <button id="resetAll" class="danger">Restablecer todos los colores a TNoodle</button>
+  </section>
+
+  <main id="puzzles"></main>
+
+  <script src="puzzles.js"></script>
+  <script src="settings.js"></script>
+  <script src="picker.js"></script>
+  <script src="options.js"></script>
+</body>
+</html>
